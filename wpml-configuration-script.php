@@ -34,6 +34,17 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'MY_PLUGIN_VERSION', '1.0.3' );
 
 
+function my_plugin_wpml_code() {
+  if (version_compare(ICL_SITEPRESS_VERSION, '4.1', '>=' ) ) {
+      add_action( 'admin_enqueue_scripts', '_kr_enqueue_wpml_scripts', 10 );
+      add_action( 'wp_print_scripts', '_kr_denqueue_wpml_scripts', 100 );
+
+  }
+}
+ 
+add_action( 'wpml_loaded', 'my_plugin_wpml_code' );
+
+
 
 function _kr_enqueue_wpml_scripts() {
     
@@ -44,11 +55,9 @@ function _kr_enqueue_wpml_scripts() {
                        true 
                      );
 }
-add_action( 'admin_enqueue_scripts', '_kr_enqueue_wpml_scripts', 10 );
 
 
 function _kr_denqueue_wpml_scripts() {
     wp_deregister_script( 'wpml-configuration-script' );
     wp_dequeue_script( 'wpml-configuration-script' );
 }
-add_action( 'wp_print_scripts', '_kr_denqueue_wpml_scripts', 100 );
