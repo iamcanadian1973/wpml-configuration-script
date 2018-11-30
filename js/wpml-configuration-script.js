@@ -3,7 +3,7 @@
 	'use strict';
     
     $( 'body.wpml_page_wpml-translation-management-menu-settings #wpbody-content .icl_tm_wrap .wpml-navigation-links')
-        .after( '<div class="wpml-section wpml-section-notice"><div class="updated below-h2"><h2>Following these instructions to generate the WPML XML:</h2><p>1. Go to <a href="#ml-content-setup-sec-cf">Custom Fields Translation</a> and click "Show system fields"</p><p>2. Go to <a href="#ml-content-setup-sec-cf">Custom Fields Translation</a> and click "Display all results"</p><p>3. Right click mouse and choose "inspect element" and then view console</p><p>4. Click the button "Generate XML"</p></div></div>' ); 
+        .after( '<div class="wpml-section wpml-section-notice"><div class="updated below-h2"><h2>Following these instructions to generate the WPML XML:</h2><p>1. Go to <a href="#ml-content-setup-sec-cf">Custom Fields Translation</a> and click "Show system fields"</p><p>2. Go to <a href="#ml-content-setup-sec-cf">Custom Fields Translation</a> and click "Display all results"</p><p>3. Right click mouse and choose "Inspect" and then view console</p><p>4. Click the "Generate XML" button which is located under the "Custom Fields Translation" table</p></div></div>' ); 
     
     $( 'body.wpml_page_wpml-translation-management-menu-settings #icl_cf_translation' ).append( '<button id="generate-xml" class="button-primary">Generate XML</button>' );  
     $( "#generate-xml" ).on( "click", function(event) {
