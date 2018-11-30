@@ -13,6 +13,7 @@
  * @wordpress-plugin
  * Plugin Name:       WPML Configuration Script
  * Plugin URI:        https://github.com/iamcanadian1973/wpml-configuration-script
+ * GitHub Plugin URI: iamcanadian1973/wpml-configuration-script
  * GitHub Plugin URI: https://github.com/iamcanadian1973/wpml-configuration-script
  * Description:       Hijacks the current script loaded by Marriott theme
  * Version:           1.0.2
