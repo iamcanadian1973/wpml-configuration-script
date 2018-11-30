@@ -8,14 +8,13 @@
  * that starts the plugin.
  *
  * @link              http://kylerumble.com
- * @since             1.0.1
  * @package           WPML_Configuration_Script
  *
  * @wordpress-plugin
  * Plugin Name:       WPML Configuration Script
  * GitHub Plugin URI: https://github.com/iamcanadian1973/wpml-configuration-script
  * Description:       Hijacks the current script loaded by Marriott theme
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Kyle Rumble
  * Author URI:        http://kylerumble.com
  * License:           GPL-2.0+
@@ -30,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'MY_PLUGIN_VERSION', '1.0.1' );
+define( 'MY_PLUGIN_VERSION', '1.0.2' );
 
 
 
