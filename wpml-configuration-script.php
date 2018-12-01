@@ -16,7 +16,7 @@
  * GitHub Plugin URI: iamcanadian1973/wpml-configuration-script
  * GitHub Plugin URI: https://github.com/iamcanadian1973/wpml-configuration-script
  * Description:       Hijacks the current script loaded by Marriott theme
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Kyle Rumble
  * Author URI:        http://kylerumble.com
  * License:           GPL-2.0+
@@ -31,7 +31,22 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'MY_PLUGIN_VERSION', '1.0.3' );
+define( 'MY_PLUGIN_VERSION', '1.0.4' );
+
+
+/**
+ * Activation Hook - Confirm WPML version
+ *
+ * @since 1.0.0
+ */
+function activation_hook() {
+    if (version_compare(ICL_SITEPRESS_VERSION, '4.1', '<' ) ) {
+        deactivate_plugins( plugin_basename( __FILE__ ) );
+        wp_die( __( 'Sorry, WPML 4.1 or greater is required to use this plugin.' ) );
+    }
+}
+
+register_activation_hook( __FILE__, 'activation_hook' );
 
 
 function my_plugin_wpml_code() {
